@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "MyScrollView.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) MyScrollView *myScrollView;
 
 @end
 
@@ -16,14 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.myScrollView = [[MyScrollView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:self.myScrollView];
+
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
